@@ -10,7 +10,8 @@
 }
 
 .bar {
-  fill: orange;
+  /*fill: orange;*/
+  fill: #fce337;
 }
 
 .bar:hover {

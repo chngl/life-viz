@@ -5,11 +5,11 @@ from os import listdir
 from os.path import isfile, join
 
 def main():
-    path = "/Users/changliu/Sites/life_viz/src/place_traveled/img"
+    path = "/home/wewe_chang_gmail_com/projects/life-viz/photos/"
     fileNames = [ f for f in listdir(path) if isfile(join(path,f)) ]
 
     # mongodb objs
-    client = MongoClient('localhost', 777)
+    client = MongoClient('localhost', 27017)
     db = client['life_viz']
     photos = db['photos']
 
@@ -20,7 +20,7 @@ def main():
         year = terms[0]
         city = terms[1]
         try:
-            photo = {"name": city, "year": year, "path": "/src/place_traveled/img/" + name}
+            photo = {"name": city, "year": year, "path": "photos/" + name}
             #print photo
             photos.insert(photo)
         except Exception, e:

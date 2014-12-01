@@ -1,6 +1,6 @@
 var mongojs = require("mongojs");
 
-var databaseUrl = "127.0.0.1:777/life_viz";
+var databaseUrl = "127.0.0.1:27017/life_viz";
 var collections = ["place_traveled", "photos"];
 var db = require("mongojs").connect(databaseUrl, collections);
 
@@ -40,8 +40,6 @@ function getAllPlaces(response) {
 }
 
 function getPhotosByPlace(response, place) {
-    console.log("Get photos for: " + place);
-    //response.setHeader('Content-Type', 'application/json');
     db.photos.find({name: place}, {_id: 0}, function(err, photos) {
         if(err) {
             console.log("There was an error getting the photos by place.");
