@@ -1,0 +1,72 @@
+body{
+  font-family: 'Open Sans', Arial, Tahoma;
+  font-weight: 400;
+  font-size: 1em;
+  color: #363636;
+  /*background: #ededed;*/
+}
+.container {
+    min-width: 1170px;
+}
+#main.container{
+    font-family: 'Open Sans', Arial, Tahoma;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: #363636;
+}
+/*
+#overlay.container{
+    min-width:1170px;
+}
+*/
+.bs-callout-info {
+}
+
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+    border-left-color: #EC7263;
+    background: #DDD;
+    opacity: 0.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor:pointer;
+}
+
+#world-map {
+    height: 585px;
+}
+
+#world-map svg{
+    -webkit-box-shadow: 3px 1px 34px -2px rgba(0,0,0,0.67);
+    -moz-box-shadow: 3px 1px 34px -2px rgba(0,0,0,0.67);
+    box-shadow: 3px 1px 34px -2px rgba(0,0,0,0.67);
+    background: #363636;
+}
+#control-panel {
+    position: relative; 
+    top: -810px;
+}
+
+#control-panel a {
+    text-decoration: none; 
+    color: #DDD;
+}
+
+#control-panel .control-btns {
+    float:right; 
+    padding: 20px 34px 0px 0px;
+}
+
+#map-overlay {
+    position: relative;
+    top: -250px;
+}

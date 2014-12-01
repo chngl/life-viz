@@ -1,0 +1,17 @@
+1987, Jinan City
+1991, Qufu
+1994, Changqing
+1998, Beijing
+2002, Lianyungang
+2003, Beijing, Zibo
+2004, Yantai
+2005, Taishan, Weifang
+2006, Tianjin, Shanghai, Nanjing, Hangzhou, Suzhou, Wuxi, Beijing
+2007, Miyun
+2008, Shijiazhuang, Qingdao
+2009, Dalian, Beidaihe
+2010, Bashang Grassland, Xi'an, Shidu, Huairou
+2011, Chengdu, Chongqing, Fenghuang, Wuhan, Guilin, Yangshuo, Nanning, Zhengzhou, Changsha, Kaifeng, Miami, Orlando
+2012, Key West, New York, Washington DC, Philadelphia, Niagara Falls, Buffalo, Tampa, Columbus, Chapel Hill, Naples
+2013, Tampa, San Francisco, Bahamas, Orlando, Zibo, Charleston, Key Largo, Key West
+2014, Jinan City, Tampa, Orlando, Naples, Sarasota, San Francisco, Mountain View, Menlo Park, Yosemite, Carmel, Santa Barbara, Santa Cruz, Morro Bay, LA, Las Vegas, Sacramento, Napa valley
