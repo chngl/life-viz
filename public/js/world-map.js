@@ -37,6 +37,8 @@ var WorldMap = function(container, containerWidth, containerHeight) {
         });
     }
 
+    // when rendering the points, attach a transition to transit the 
+    // points from 0 radius to a value to have a visual effect
     this.renderPoints = function(pnts, pointClicked) {
         points.push.apply(points, pnts);
         pointGroup.selectAll("circle").data(points)
@@ -45,7 +47,7 @@ var WorldMap = function(container, containerWidth, containerHeight) {
             .attr("cx", function(d) { return projection([d.lng, d.lat])[0]; })
             .attr("cy", function(d) { return projection([d.lng, d.lat])[1]; })
             .attr("class","point")
-            .attr("r", pointInitRadius / s)
+            .attr("r", 0)
             .attr("fill", pointInitColor)
             .attr("opacity", pointInitOpacity)
             .on("click", function(d) {
@@ -59,40 +61,21 @@ var WorldMap = function(container, containerWidth, containerHeight) {
                 // use pageX and pageY to get the abolute positon of the mouse
                 var coordinates = [d3.event.pageX, d3.event.pageY];
                 pointClicked(d, coordinates);
-            }) ;
-    }
-    
-    this.hidePoints = function() {
-        pointGroup.selectAll("circle").attr("opacity", 0);
-    }
-
-    this.displayPoints = function() {
-        pointGroup.selectAll("circle").attr("opacity", pointInitOpacity);
-    }
-
-    this.blinkPoints = function(pnts, key) {
-        //var pointSet = d3.set(pnts.map(function(d) {return d.year + d.name;}));
-        var pointSet = d3.set(pnts.map(key));
-        pointGroup.selectAll("circle").transition()
+            })
+            .transition()
             .duration(1000)
-            .attr("r", function(d) { 
-                if (pointSet.has(key(d))) {
-                    return pointClickedRadius / s;
-                }else {
-                    return pointInitRadius / s;
-                }
-            })
-            .attr("opacity", function(d) { 
-                if (pointSet.has(key(d))) {
-                    return pointInitOpacity;
-                } else {
-                    return d3.select(this).attr("opacity");
-                }
-
-            })
+            .attr("r", function(d) { return pointClickedRadius / s; })
+            .attr("opacity", function(d) { return pointInitOpacity; })
            .transition()
            .duration(1000)
            .attr("r", pointInitRadius / s);
+
+    }
+    
+    this.removePoints = function() {
+        // be sure to empty points, otherwise some funky thing's gonna happen
+        points = [];
+        pointGroup.selectAll("circle").data([]).exit().remove();
     }
 
     function setup(width, height){

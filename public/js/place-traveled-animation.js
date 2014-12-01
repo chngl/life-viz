@@ -1,5 +1,5 @@
 // this class handles all the animation
-// idea: each tick along the animation, blink the places on the map for the year
+// idea: each tick along the animation, render the places on the map for the year
 // and highlight the bar in the bar chart
 var PlaceTraveledAnimation = function(container) {
     var placeByYear = null; 
@@ -20,9 +20,9 @@ var PlaceTraveledAnimation = function(container) {
 
     function tick() {
         // at each tick, 
-        // 1). blink the places for that year
+        // 1). render the places for that year
         // 2). height the bar for the year
-        worldMap.blinkPoints(placeByYear[idx].places, getYear);
+        worldMap.renderPoints(placeByYear[idx].places, photoPopup.show.bind(photoPopup));
         placeCountBarchart.highlight(placeByYear[idx]);
         idx += 1;
         if (idx < placeByYear.length) {
@@ -36,9 +36,12 @@ var PlaceTraveledAnimation = function(container) {
             window.clearTimeout(ticking);
         }
        
-        this.showAll();
-        worldMap.hidePoints();
-        worldMap.blinkPoints(data.places, getYear);
+        // highlight all the bars
+        placeCountBarchart.highlightAll();
+
+        // remove all points first before rendering the points for the current year
+        worldMap.removePoints();
+        worldMap.renderPoints(data.places, photoPopup.show.bind(photoPopup));
     }
 
     this.animate = function() {
@@ -50,9 +53,9 @@ var PlaceTraveledAnimation = function(container) {
             }
 
             idx = 0;
-            // first, hide all points on the map
+            // first, remove all points on the map
             // gray out all the bars in the barchart
-            worldMap.hidePoints();
+            worldMap.removePoints();
             placeCountBarchart.grayoutAll();
             
             // then start ticking
@@ -68,7 +71,9 @@ var PlaceTraveledAnimation = function(container) {
                 window.clearTimeout(ticking);
             }
 
-            worldMap.displayPoints();
+            for (var i = 0; i < placeByYear.length; i++) {
+                worldMap.renderPoints(placeByYear[i].places, photoPopup.show.bind(photoPopup));
+            }
             placeCountBarchart.highlightAll();
         });
     }
@@ -115,14 +120,11 @@ var PlaceTraveledAnimation = function(container) {
         photoPopup = new PhotoPopup(extent);
 
         // when the data is ready, 
-        // 1). reader the place point on the 
+        // 1). set the data
         // 2). reader the bar chart
         placeCountBarchart = new BarChart("#place-count-barchart");
         LifeVizApi.getPlaceTraveledByYear(function(data) {
             placeByYear = data;
-            for (var i = 0; i < placeByYear.length; i++) {
-                worldMap.renderPoints(placeByYear[i].places, photoPopup.show.bind(photoPopup));
-            }
             placeCountBarchart.render(placeByYear, this.showPlacesByYear.bind(this));
             initialized.resolve("");
         }.bind(this));
