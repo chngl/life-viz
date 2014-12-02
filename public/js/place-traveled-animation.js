@@ -85,7 +85,7 @@ var PlaceTraveledAnimation = function(container) {
             '    <div class="col-xs-4">' +
             '        <div class="bs-callout bs-callout-info">' +
             '            <h4>MY FOOTPRINTS</h4>' +
-            '            <p>This visualization is built on top of d3.js. It shows my footprints over my life time.</p>' +
+            '            <p>This visualization is built on top of d3.js. It shows my footprints over my life time. Click on the points and bars to get more interaction.</p>' +
             '            <p>So far, i have set foot on 2 continents, 3 countries and about 70 different cities.' + 
             '                Still have a long long way to go to become a real world traveller :) </p>' +
             '        </div>' + 
