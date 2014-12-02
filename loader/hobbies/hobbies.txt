@@ -1,0 +1,36 @@
+Mom & Dad: 0-3
+Pacifier: 1-3
+Toy Car: 3-10
+Soccer: 7-27
+Toy Transformer: 4-8
+Yoyo: 10-13
+Video Console: 6-10
+Computer Game: 12-20
+Basketball: 
+Badminton:
+Picking up Girls:
+Photography:
+Travelling: 
+C++: 
+Python:
+Js:
+D3.js: 
+B-Box:
+Drum Set:
+Movies: 
+Readings: 
+Pool Games: 
+XBox: 
+Club: 
+Drinking: 
+Wife: 
+FIFA: 
+PES Soccer: 
+Diablo: 
+War Craft: 
+Wake Boarding:
+Snokeling: 
+Eating: 
+Working Out: 
+Snow Boarding:
+

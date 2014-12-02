@@ -17,20 +17,10 @@ var PhotoPopup = function(extent) {
         var top = coords[1];
         var left = coords[0];
     
-        var spinnerHtml = '<i class="fa fa-spinner fa-spin"></i>';
-        d3.select("body").append("div")
-            .attr("id", "spinner")
-            .style({
-                "position": "absolute ",
-                "top": top + "px", 
-                "left": left + "px", 
-            })
-            .html(spinnerHtml);
-
         // set html first
         var html = 
             '<div class="photo-pop-header">' + 
-            '    <h4>' + place.name + '</h4>' + 
+            '    <h4>' + place.name + '</h4> <i id="spinner" class="fa fa-spinner fa-spin"></i>' + 
             '    <div class="close-sign">' + 
             '        <a id="closePopup">&#215;</a>' + 
             '    </div>' + 
@@ -90,7 +80,7 @@ var PhotoPopup = function(extent) {
     this.display = function() {
         
         // remove spinner first
-        //$("#spinner").remove();
+        $("#spinner").remove();
 
         // it seems css being loaded after the js codes,
         // so calling imgs[i].width may result the wrong value
