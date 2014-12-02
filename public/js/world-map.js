@@ -55,8 +55,13 @@ var WorldMap = function(container, containerWidth, containerHeight) {
                     .attr("fill", pointInitColor)
                     .attr("r", pointInitRadius / s);
                 d3.select(this).transition()
+                    .duration(500)
                     .attr("fill", pointClickedColor)
-                    .attr("r", pointClickedRadius / s);
+                    .attr("r", pointClickedRadius / s)
+                    .transition()
+                    .duration(1000)
+                    .attr("fill", pointInitColor)
+                    .attr("r", pointInitRadius / s);
 
                 // use pageX and pageY to get the abolute positon of the mouse
                 var coordinates = [d3.event.pageX, d3.event.pageY];

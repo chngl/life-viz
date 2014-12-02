@@ -163,7 +163,7 @@ EDUCATION
 #education .description p{
   font-size: 1.3em;
   margin-top: 5px;
-  padding: 0;
+  padding: 5px 20px 5px  20px;
 }
 /*******************************************
 EXPERIENCES
@@ -320,6 +320,14 @@ HOBBIES
   position: absolute;
   top: 6px;
   left: 7px;
+}
+
+.profile-pic {
+    width: 100%;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    border: 0px double #000000;
 }
 /*******************************************
 MEDIA

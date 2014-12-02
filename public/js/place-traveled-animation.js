@@ -87,7 +87,7 @@ var PlaceTraveledAnimation = function(container) {
             '            <h4>MY FOOTPRINTS</h4>' +
             '            <p>This visualization is built on top of d3.js. It shows my footprints over my life time.</p>' +
             '            <p>So far, i have set foot on 2 continents, 3 countries and about 70 different cities.' + 
-            '                Still have a long way to go to become a real world traveller :) </p>' +
+            '                Still have a long long way to go to become a real world traveller :) </p>' +
             '        </div>' + 
             '    </div>' +
             '    <div class="col-xs-8" id="place-count-barchart" style="margin-top:20px;"></div>' +

@@ -20,7 +20,7 @@ var PhotoPopup = function(extent) {
         // set html first
         var html = 
             '<div class="photo-pop-header">' + 
-            '    <h4>' + place.name + '</h4>' + 
+            '    <h4>' + place.name + '<i id="spinner" class="fa fa-spinner fa-spin"></i></h4>' + 
             '    <div class="close-sign">' + 
             '        <a id="closePopup">&#215;</a>' + 
             '    </div>' + 
@@ -78,7 +78,10 @@ var PhotoPopup = function(extent) {
     // when to display, adjust the position if necessary
     // then transit to show
     this.display = function() {
-       
+        
+        // remove spinner first
+        $("#spinner").remove();
+
         // it seems css being loaded after the js codes,
         // so calling imgs[i].width may result the wrong value
         // (in my case, I want the width after comression, not the original width)
@@ -98,9 +101,11 @@ var PhotoPopup = function(extent) {
             }
         }
 
-        d3.select("#photo-popup-div").transition()
+        d3.select("#imgs-ul").transition()
             .duration(500)
-            .style({"opacity": 1});
+            .style({
+                "opacity": 1
+            });
     }
 };
 

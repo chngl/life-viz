@@ -17,7 +17,7 @@
 
 .photo-popup {
     background: #DDD;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     display: inline-block;
     padding-left: 10px;
@@ -28,6 +28,8 @@
     border-left-color: orange;
     min-width: 200px;
     max-width: 800px;
+    -webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition:width 2s, height 2s, background-color 2s, transform 2s;
 }
 
 .photo-popup img {
@@ -44,3 +46,6 @@
     display: inline-block;
 }
 
+#imgs-ul {
+    opacity: 0;
+}
