@@ -57,7 +57,7 @@ var BrushControl = function(container, containerWidth, containerHeight, brushedC
             })
             .attr("font-size", function(d) {
                 if (d === target) {
-                    return 20;
+                    return 22;
                 } else{
                     return 12;
                 }

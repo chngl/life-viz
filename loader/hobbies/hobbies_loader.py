@@ -40,7 +40,6 @@ def main():
                 hobbyDic[currYear] = [hb]
             currYear += 1
 
-    pdb.set_trace()
     for key, value in hobbyDic.iteritems():
         hobby.insert({"year": key, "hobbies": value})
 

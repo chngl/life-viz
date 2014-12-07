@@ -33,10 +33,19 @@ Snokeling:25-27
 Working Out: 23-27
 Snow Boarding: 27-27
 Pasical: 16-19
-html & css: 19-20
+Html & Css: 19-20
 Machine Learning: 24-27
 Recomendation System: 22-24
 Data Mining: 22-27
+Data Visualization: 24-27
 java: 19-20
 Drawing: 3-10
 Field & Track: 10-15
+Clash of Clans: 24-27
+NLP: 20-22
+Gitar: 13-18
+Economy: 20-27
+Hiking: 23-25
+Beach: 27-27
+Mapnik: 24-25
+GIS: 24-25

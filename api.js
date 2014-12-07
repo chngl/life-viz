@@ -5,14 +5,14 @@ var collections = ["place_traveled", "photos", "hobby"];
 var db = require("mongojs").connect(databaseUrl, collections);
 
 function getHobbies(response) {
-    db.hobby.find({}, {_id: 0}, function(err, hobbies) {
+    db.hobby.find({}, {_id: 0}).sort({"year": 1}, function(err, hobbies) {
         if(err) {
             console.log("There was an error getting all the places.");
             response.end();
             return;
         }
         response.json(hobbies);
-    }).sort({"year": 1});
+    });
 }
 
 function getPlacesGroupbyYear(response) {
