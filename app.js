@@ -24,6 +24,10 @@ router.get('/api/get_places_groupby_year', function(request, response) {
     api.getPlacesGroupbyYear(response);
 });
 
+router.get('/api/get_hobbies', function(request, response) {
+    api.getHobbies(response);
+});
+
 router.get('/api/get_all_places', function(request, response) {
     api.getAllPlaces(response);
 });
