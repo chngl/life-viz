@@ -1,6 +1,6 @@
 var mongojs = require("mongojs");
 
-var databaseUrl = "127.0.0.1:777/life_viz";
+var databaseUrl = "127.0.0.1:27017/life_viz";
 var collections = ["place_traveled", "photos", "hobby"];
 var db = require("mongojs").connect(databaseUrl, collections);
 

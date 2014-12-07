@@ -2,7 +2,7 @@ var LifeVizApi = function() {
     return {
         // for now, use setTimeout for test
         getHobbyByYear: function(callback) {
-            $.get("http://127.0.0.1:8080/life_viz/api/get_hobbies")
+            $.get("http://130.211.157.130:8080/life_viz/api/get_hobbies")
                 .done(function(data) {
                     if (callback) {
                         callback(data);

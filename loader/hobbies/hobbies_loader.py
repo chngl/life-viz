@@ -8,7 +8,7 @@ def main():
     infile.close()
 
     # mongodb objs
-    client = MongoClient('localhost', 777)
+    client = MongoClient('localhost', 27017)
     db = client['life_viz']
     hobby = db['hobby']
     
