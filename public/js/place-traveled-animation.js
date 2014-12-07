@@ -80,8 +80,11 @@ var PlaceTraveledAnimation = function(container) {
    
     this.init = function() {
         var html = 
+            '<div class="page-header box">' +
+            '    <h2>LIFE IS AWESOME</h2>' +
+            '</div>' +
             '<div class="row"><div class="col-xs-12" id="world-map"></div></div>' +
-            '<div class="row" id="map-overlay">' +
+            '<div class="row" id="overlay">' +
             '    <div class="col-xs-4">' +
             '        <div class="bs-callout bs-callout-info">' +
             '            <h4>MY FOOTPRINTS</h4>' +
@@ -100,7 +103,7 @@ var PlaceTraveledAnimation = function(container) {
             '        </div>' +
             '    </div>' + 
             '</div>';
-        $(container).html(html);
+        $(container).append(html);
         
         var offset = $(container).offset();
         var width = $(container).width();

@@ -1,8 +1,19 @@
 var mongojs = require("mongojs");
 
-var databaseUrl = "127.0.0.1:27017/life_viz";
-var collections = ["place_traveled", "photos"];
+var databaseUrl = "127.0.0.1:777/life_viz";
+var collections = ["place_traveled", "photos", "hobby"];
 var db = require("mongojs").connect(databaseUrl, collections);
+
+function getHobbies(response) {
+    db.hobby.find({}, {_id: 0}, function(err, hobbies) {
+        if(err) {
+            console.log("There was an error getting all the places.");
+            response.end();
+            return;
+        }
+        response.json(hobbies);
+    }).sort({"year": 1});
+}
 
 function getPlacesGroupbyYear(response) {
     db.place_traveled.group({
@@ -53,4 +64,4 @@ function getPhotosByPlace(response, place) {
 exports.getPlacesGroupbyYear = getPlacesGroupbyYear;
 exports.getAllPlaces = getAllPlaces;
 exports.getPhotosByPlace = getPhotosByPlace;
-
+exports.getHobbies = getHobbies;

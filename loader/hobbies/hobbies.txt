@@ -1,4 +1,5 @@
 Mom & Dad: 0-3
+grandma: 3-10
 Pacifier: 1-3
 Toy Car: 3-10
 Soccer: 7-27
@@ -6,31 +7,36 @@ Toy Transformer: 4-8
 Yoyo: 10-13
 Video Console: 6-10
 Computer Game: 12-20
-Basketball: 
-Badminton:
-Picking up Girls:
-Photography:
-Travelling: 
-C++: 
-Python:
-Js:
-D3.js: 
-B-Box:
-Drum Set:
-Movies: 
-Readings: 
-Pool Games: 
-XBox: 
-Club: 
-Drinking: 
-Wife: 
-FIFA: 
-PES Soccer: 
-Diablo: 
-War Craft: 
-Wake Boarding:
-Snokeling: 
-Eating: 
-Working Out: 
-Snow Boarding:
-
+Basketball: 10-15
+Badminton: 19-27
+Picking up Girls: 16-25
+Photography: 23-27
+Travelling: 23-27
+C++: 22-23
+Python: 23-25
+Js: 23-27
+D3.js: 27-27
+B-Box: 22-25
+Drum Set: 27-27
+Movies: 21-27
+Readings: 16-19
+Pool Games: 20-24
+XBox: 24-27
+Club: 19-20
+Drinking: 20-24
+FIFA: 24-27
+PES Soccer: 10-15
+Diablo: 10-13
+War Craft: 19-21
+Wake Boarding:27-27
+Snokeling:25-27
+Working Out: 23-27
+Snow Boarding: 27-27
+Pasical: 16-19
+html & css: 19-20
+Machine Learning: 24-27
+Recomendation System: 22-24
+Data Mining: 22-27
+java: 19-20
+Drawing: 3-10
+Field & Track: 10-15

@@ -15,30 +15,20 @@
     <link href="css/photo-popup.css" rel="stylesheet">
     <link href="css/world-map.css" rel="stylesheet">
     <link href="css/bar-chart.css" rel="stylesheet">
+    <link href="css/brush-control.css" rel="stylesheet">
+    <link href="css/force-layout.css" rel="stylesheet">
     <link href="css/resume.css" rel="stylesheet">
+    <link href="css/hobby-animation.css" rel="stylesheet">
 </head>
  <body>
     <!-- Begin page content -->
-    <div class="container">
-        <div class="page-header box">
-            <h2>LIFE IS AWESOME</h2>
-        </div>
+    <div class="container" id="place-traveled-animation">
     </div>
-    
-    <div class="container" id="main"></div>
-    <div class="container" id="resume">
-<div class="row">
-        <div class="col-xs-12">
-          <div id="photo-header" class="text-center">
-            <!-- PHOTO (AVATAR) -->
-            <div id="photo">
-              <img src="photos/profile.jpg" alt="avatar">
-            </div>
-            <div id="text-header">
-              <h1>Hello,<br> my name is <span>Chang Liu</span><sup>27yo</sup>, welcome to my home :)</h1>
-            </div>
-          </div>
-        </div>
+    <div class="container" id="hobby-animation">
+    </div>
+
+    <div class="container" id="resume" >
+      <div class="page-header box">
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-7">
@@ -195,21 +185,15 @@
 <script type="text/javascript" src="js/lib/topojson.v1.min.js"></script>
 <script type="text/javascript" src="js/world-map.js"></script>
 <script type="text/javascript" src="js/bar-chart.js"></script>
+<script type="text/javascript" src="js/brush-control.js"></script>
+<script type="text/javascript" src="js/force-layout.js"></script>
 <script type="text/javascript" src="js/photo-popup.js"></script>
 <script type="text/javascript" src="js/place-traveled-animation.js"></script>
+<script type="text/javascript" src="js/hobby-animation.js"></script>
 <script type="text/javascript" src="js/life-viz-api.js"></script>
 <script type="text/javascript" src="js/life-viz-app.js"></script>
+<!--<script type="text/javascript" src="js/ga.js"></script>-->
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-57227251-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </html>
 
